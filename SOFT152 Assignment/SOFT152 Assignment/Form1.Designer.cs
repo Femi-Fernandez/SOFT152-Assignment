@@ -1,6 +1,6 @@
 ﻿namespace SOFT152_Assignment
 {
-    partial class Form1
+    partial class DisplayInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDisplayInfo = new System.Windows.Forms.Button();
+            this.btnEditMonthInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // combLocation
@@ -81,27 +82,38 @@
             // 
             // btnDisplayInfo
             // 
-            this.btnDisplayInfo.Location = new System.Drawing.Point(18, 136);
+            this.btnDisplayInfo.Location = new System.Drawing.Point(94, 136);
             this.btnDisplayInfo.Name = "btnDisplayInfo";
             this.btnDisplayInfo.Size = new System.Drawing.Size(142, 35);
             this.btnDisplayInfo.TabIndex = 5;
-            this.btnDisplayInfo.Text = "Show info";
+            this.btnDisplayInfo.Text = "Show Year\'s Month info";
             this.btnDisplayInfo.UseVisualStyleBackColor = true;
             this.btnDisplayInfo.Click += new System.EventHandler(this.btnDisplayInfo_Click);
             // 
-            // Form1
+            // btnEditMonthInfo
+            // 
+            this.btnEditMonthInfo.Location = new System.Drawing.Point(94, 213);
+            this.btnEditMonthInfo.Name = "btnEditMonthInfo";
+            this.btnEditMonthInfo.Size = new System.Drawing.Size(142, 38);
+            this.btnEditMonthInfo.TabIndex = 6;
+            this.btnEditMonthInfo.Text = "Edit a month\'s Info";
+            this.btnEditMonthInfo.UseVisualStyleBackColor = true;
+            this.btnEditMonthInfo.Click += new System.EventHandler(this.btnEditMonthInfo_Click);
+            // 
+            // DisplayInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEditMonthInfo);
             this.Controls.Add(this.btnDisplayInfo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstMonthInfo);
             this.Controls.Add(this.combYear);
             this.Controls.Add(this.combLocation);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "DisplayInfo";
+            this.Text = "Display year info";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -116,6 +128,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDisplayInfo;
+        private System.Windows.Forms.Button btnEditMonthInfo;
     }
 }
 
