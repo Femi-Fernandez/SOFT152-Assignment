@@ -21,6 +21,12 @@ namespace SOFT152_Assignment
         {
             Data.locations = new Location[0];
             SOFT152_Assignment.Location.setupLocationArray();
+
+            for (int i = 0; i < 11; i++)
+            {
+                combLocation.Items.Add(Data.locations[i].getLocationName());
+            }
+            
         }
     }
 }
