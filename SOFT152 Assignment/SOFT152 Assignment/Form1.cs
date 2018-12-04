@@ -28,5 +28,17 @@ namespace SOFT152_Assignment
             }
             
         }
+
+        private void combLocation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int pos = combLocation.SelectedIndex;
+
+            int numyears = Data.locations[pos].getnumyears();
+
+            for (int i = 0; i < numyears; i++)
+            {
+                combYear.Items.Add(Data.locations[pos].getyearinfo()[i].getYearDesc());
+            }
+        }
     }
 }

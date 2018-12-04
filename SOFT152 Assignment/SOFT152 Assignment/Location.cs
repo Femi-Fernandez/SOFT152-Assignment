@@ -123,9 +123,9 @@ namespace SOFT152_Assignment
                 Data.locations[i] = new Location(locationname, streetname, country, postcode, latitude, longitude, numyears, new Year[numyears]);
                 for (int j = 0; j < numyears; j++)
                 {
-                    string yeardesc = locationfile.ReadLine();
                     string yearID = locationfile.ReadLine();
-                    Data.locations[i].yearInfo[j] = new Year(yeardesc, yearID, new Month[12]);
+                    string yeardesc = locationfile.ReadLine();
+                    Data.locations[i].yearInfo[j] = new Year(yearID, yeardesc, new Month[12]);
                     for (int k = 0; k < 12; k++)
                     {
                         if (k == 0)

@@ -43,6 +43,7 @@
             this.combLocation.Name = "combLocation";
             this.combLocation.Size = new System.Drawing.Size(150, 21);
             this.combLocation.TabIndex = 0;
+            this.combLocation.SelectedIndexChanged += new System.EventHandler(this.combLocation_SelectedIndexChanged);
             // 
             // combYear
             // 
