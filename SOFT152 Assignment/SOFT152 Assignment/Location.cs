@@ -100,12 +100,13 @@ namespace SOFT152_Assignment
 
         public static void setupLocationArray()
         {
+            //this opens the file so the code can read data from it. 
             StreamReader locationfile = new StreamReader("inputEXTENDED.txt");
 
+            
             int numoflocations = Convert.ToInt32(locationfile.ReadLine());
 
-            // string theLocationName, string theStreetName, string theCountry,
-            // string thePostcode, string theLatitude, string theLongitude
+            //this will loop however many locations there are.
             for (int i = 0; i < numoflocations; i++)
             {
 
@@ -121,13 +122,19 @@ namespace SOFT152_Assignment
                 Array.Resize(ref Data.locations, Data.locations.Length + 1);
 
                 Data.locations[i] = new Location(locationname, streetname, country, postcode, latitude, longitude, numyears, new Year[numyears]);
+
+                //this will loop based on what value numyears is. 
                 for (int j = 0; j < numyears; j++)
                 {
                     string yearID = locationfile.ReadLine();
                     string yeardesc = locationfile.ReadLine();
                     Data.locations[i].yearInfo[j] = new Year(yearID, yeardesc, new Month[12]);
+                    //this loops 12 times because, there are 12 months in a year
                     for (int k = 0; k < 12; k++)
                     {
+
+                        //this if else statement is required because each month has the year ID above it
+                        //what this does is skip the first yearID readline so no errors occur. 
                         if (k == 0)
                         {
                             string monthID = locationfile.ReadLine();
