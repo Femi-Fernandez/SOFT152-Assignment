@@ -31,13 +31,30 @@ namespace SOFT152_Assignment
 
         private void combLocation_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int pos = combLocation.SelectedIndex;
+            int locationpos = combLocation.SelectedIndex;
 
-            int numyears = Data.locations[pos].getnumyears();
+            int numyears = Data.locations[locationpos].getnumyears();
 
             for (int i = 0; i < numyears; i++)
             {
-                combYear.Items.Add(Data.locations[pos].getyearinfo()[i].getYearDesc());
+                combYear.Items.Add(Data.locations[locationpos].getyearinfo()[i].getYearDesc());
+            }
+        }
+
+        private void btnDisplayInfo_Click(object sender, EventArgs e)
+        {
+            int locationpos = combLocation.SelectedIndex;
+            int yearpos = combYear.SelectedIndex;
+
+            for (int i = 0; i < 12; i++)
+            {
+                lstMonthInfo.Items.Add("Month: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMonthID());
+                lstMonthInfo.Items.Add("Max Temperature: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMaxTemp());
+                lstMonthInfo.Items.Add("Min temp: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMinTemp());
+                lstMonthInfo.Items.Add("Number of days with air frost: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getAirFrostNum());
+                lstMonthInfo.Items.Add("mm of rain: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMmOfRain());
+                lstMonthInfo.Items.Add("Hours of sun: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getHoursOfSun());
+
             }
         }
     }

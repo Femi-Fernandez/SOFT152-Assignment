@@ -30,7 +30,7 @@
         {
             this.combLocation = new System.Windows.Forms.ComboBox();
             this.combYear = new System.Windows.Forms.ComboBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstMonthInfo = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDisplayInfo = new System.Windows.Forms.Button();
@@ -53,13 +53,13 @@
             this.combYear.Size = new System.Drawing.Size(150, 21);
             this.combYear.TabIndex = 1;
             // 
-            // listBox1
+            // lstMonthInfo
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(420, 49);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(355, 368);
-            this.listBox1.TabIndex = 2;
+            this.lstMonthInfo.FormattingEnabled = true;
+            this.lstMonthInfo.Location = new System.Drawing.Point(420, 49);
+            this.lstMonthInfo.Name = "lstMonthInfo";
+            this.lstMonthInfo.Size = new System.Drawing.Size(355, 368);
+            this.lstMonthInfo.TabIndex = 2;
             // 
             // label1
             // 
@@ -87,6 +87,7 @@
             this.btnDisplayInfo.TabIndex = 5;
             this.btnDisplayInfo.Text = "Show info";
             this.btnDisplayInfo.UseVisualStyleBackColor = true;
+            this.btnDisplayInfo.Click += new System.EventHandler(this.btnDisplayInfo_Click);
             // 
             // Form1
             // 
@@ -96,7 +97,7 @@
             this.Controls.Add(this.btnDisplayInfo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lstMonthInfo);
             this.Controls.Add(this.combYear);
             this.Controls.Add(this.combLocation);
             this.Name = "Form1";
@@ -111,7 +112,7 @@
 
         private System.Windows.Forms.ComboBox combLocation;
         private System.Windows.Forms.ComboBox combYear;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstMonthInfo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDisplayInfo;
