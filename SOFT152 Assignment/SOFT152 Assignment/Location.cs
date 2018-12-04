@@ -102,20 +102,21 @@ namespace SOFT152_Assignment
         {
             StreamReader locationfile = new StreamReader("inputEXTENDED.txt");
 
-            string next_line = locationfile.ReadLine();
+            int numoflocations = Convert.ToInt32(locationfile.ReadLine());
 
-            int i = 0;
             // string theLocationName, string theStreetName, string theCountry,
             // string thePostcode, string theLatitude, string theLongitude
-            while (next_line != null)
+            for (int i = 0; i < numoflocations; i++)
             {
-                string locationname = next_line;
+
+                string locationname = locationfile.ReadLine();
                 string streetname = locationfile.ReadLine();
                 string country = locationfile.ReadLine();
                 string postcode = locationfile.ReadLine();
                 string latitude = locationfile.ReadLine();
                 string longitude = locationfile.ReadLine();
-                int numyears = Convert.ToInt32(locationfile.ReadLine());
+                string numberOfyears = locationfile.ReadLine();
+                int numyears = Convert.ToInt32(numberOfyears);
 
                 Array.Resize(ref Data.locations, Data.locations.Length + 1);
 
@@ -127,14 +128,28 @@ namespace SOFT152_Assignment
                     Data.locations[i].yearInfo[j] = new Year(yeardesc, yearID, new Month[12]);
                     for (int k = 0; k < 12; k++)
                     {
-                        string monthID = locationfile.ReadLine();
-                        string maxtemp = locationfile.ReadLine();
-                        string mintemp = locationfile.ReadLine();
-                        string numairfrost = locationfile.ReadLine();
-                        string mmofrain = locationfile.ReadLine();
-                        string hoursofsun = locationfile.ReadLine();
-
-                        Data.locations[i].yearInfo[j].getmonthinfo()[k] = new Month(monthID, maxtemp, mintemp, numairfrost, mmofrain, hoursofsun);
+                        if (k == 0)
+                        {
+                            string monthID = locationfile.ReadLine();
+                            string maxtemp = locationfile.ReadLine();
+                            string mintemp = locationfile.ReadLine();
+                            string numairfrost = locationfile.ReadLine();
+                            string mmofrain = locationfile.ReadLine();
+                            string hoursofsun = locationfile.ReadLine();
+                            Data.locations[i].yearInfo[j].getmonthinfo()[k] = new Month(monthID, maxtemp, mintemp, numairfrost, mmofrain, hoursofsun);
+                        }
+                        else
+                        {
+                            string theyearID = locationfile.ReadLine();
+                            string monthID = locationfile.ReadLine();
+                            string maxtemp = locationfile.ReadLine();
+                            string mintemp = locationfile.ReadLine();
+                            string numairfrost = locationfile.ReadLine();
+                            string mmofrain = locationfile.ReadLine();
+                            string hoursofsun = locationfile.ReadLine();
+                            Data.locations[i].yearInfo[j].getmonthinfo()[k] = new Month(monthID, maxtemp, mintemp, numairfrost, mmofrain, hoursofsun);
+                        }
+                        
                     }
                 }
             }
