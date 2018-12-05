@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditMonth.Designer.cs">
+      <DependentUpon>frmEditMonth.cs</DependentUpon>
+    </Compile>
     <Compile Include="Location.cs" />
     <Compile Include="Month.cs" />
     <Compile Include="Program.cs" />
@@ -59,6 +65,9 @@
     <Compile Include="Year.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditMonth.resx">
+      <DependentUpon>frmEditMonth.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

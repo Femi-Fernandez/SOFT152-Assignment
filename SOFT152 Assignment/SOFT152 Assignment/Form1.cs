@@ -58,12 +58,15 @@ namespace SOFT152_Assignment
                 lstMonthInfo.Items.Add("Number of days with air frost: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getAirFrostNum());
                 lstMonthInfo.Items.Add("mm of rain: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMmOfRain());
                 lstMonthInfo.Items.Add("Hours of sun: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getHoursOfSun());
-
+                lstMonthInfo.Items.Add(" ");
             }
         }
 
         private void btnEditMonthInfo_Click(object sender, EventArgs e)
         {
+            frmEditMonth temAddNewBook = new frmEditMonth();
+            temAddNewBook.Show();
+            frmkeepDisplayInfo.Hide();
 
         }
     }
