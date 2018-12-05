@@ -58,6 +58,8 @@ namespace SOFT152_Assignment
             int yearpos = combYear.SelectedIndex;
             int monthpos = combMonth.SelectedIndex;
 
+            lstCurrentmonth.Items.Clear();
+
             lstCurrentmonth.Items.Add("Month: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].getMonthID());
             lstCurrentmonth.Items.Add("Max Temperature: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].getMaxTemp());
             lstCurrentmonth.Items.Add("Min temp: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].getMinTemp());
@@ -66,11 +68,44 @@ namespace SOFT152_Assignment
             lstCurrentmonth.Items.Add("Hours of sun: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].getHoursOfSun());
         }
 
+
+
+
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             DisplayInfo temdisplayinfo = new DisplayInfo();
             temdisplayinfo.Show();
             frmkeepEditMonth.Hide();
+        }
+
+        private void btnEditAll_Click(object sender, EventArgs e)
+        {
+            EditMonthValues();
+        }
+
+        private void EditMonthValues()
+        {
+            string newmaxtemp = txtnewMaxTemp.Text;
+            string newmintemp = txtNewMinTemp.Text;
+            string newnumfrostdays = txtNumFrostDays.Text;
+            string newmmofrain = txtNewMmOfRain.Text;
+            string newhoursofsun = txtNewHoursOfSun.Text;
+
+            int locationpos = combLocation.SelectedIndex;
+            int yearpos = combYear.SelectedIndex;
+            int monthpos = combMonth.SelectedIndex;
+
+            
+
+            Month newmonth =  new Month(Convert.ToString(monthpos), newmaxtemp, newmintemp, newnumfrostdays, newmmofrain, newhoursofsun);
+
+            Data.locations[locationpos].getyearinfo()[yearpos].setmonthinfo();
+            //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMaxTemp(newmaxtemp);
+            //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMinTemp(newmintemp);
+            //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setAirFrostNum(newnumfrostdays);
+            //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMmOfRain(newmmofrain);
+            //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setHoursOfSun(newhoursofsun);
         }
     }
 }

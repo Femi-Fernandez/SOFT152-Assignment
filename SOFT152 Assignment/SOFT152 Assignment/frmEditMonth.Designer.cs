@@ -199,6 +199,7 @@
             this.btnEditAll.TabIndex = 9;
             this.btnEditAll.Text = "Edit all this months values";
             this.btnEditAll.UseVisualStyleBackColor = true;
+            this.btnEditAll.Click += new System.EventHandler(this.btnEditAll_Click);
             // 
             // btnCancel
             // 
