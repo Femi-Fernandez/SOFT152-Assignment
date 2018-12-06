@@ -96,16 +96,19 @@ namespace SOFT152_Assignment
             int yearpos = combYear.SelectedIndex;
             int monthpos = combMonth.SelectedIndex;
 
-            
 
-            Month newmonth =  new Month(Convert.ToString(monthpos), newmaxtemp, newmintemp, newnumfrostdays, newmmofrain, newhoursofsun);
+            //Month[] newmonth = new Month[0];
+            //newmonth[0] = new Month(Convert.ToString(monthpos), newmaxtemp, newmintemp, newnumfrostdays, newmmofrain, newhoursofsun);
+            //Data.locations[locationpos].getyearinfo()[yearpos].setmonthinfo(newmonth);
 
-            Data.locations[locationpos].getyearinfo()[yearpos].setmonthinfo();
+            Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMaxTemp(newmaxtemp);
+
             //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMaxTemp(newmaxtemp);
             //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMinTemp(newmintemp);
             //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setAirFrostNum(newnumfrostdays);
             //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMmOfRain(newmmofrain);
             //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setHoursOfSun(newhoursofsun);
+
         }
     }
 }
