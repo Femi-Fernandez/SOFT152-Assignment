@@ -41,7 +41,7 @@ namespace SOFT152_Assignment
 
             for (int i = 0; i < numyears; i++)
             {
-                combYear.Items.Add(Data.locations[locationpos].getyearinfo()[i].getYearDesc());
+                combYear.Items.Add(Data.locations[locationpos].getyearinfo()[i].getYear());
             }
         }
 
@@ -65,10 +65,17 @@ namespace SOFT152_Assignment
 
         private void btnEditMonthInfo_Click(object sender, EventArgs e)
         {
-            frmEditMonth temAddNewBook = new frmEditMonth();
-            temAddNewBook.Show();
+            frmEditMonth tempeditmonth = new frmEditMonth();
+            tempeditmonth.Show();
             frmkeepDisplayInfo.Hide();
 
+        }
+
+        private void btnEditYearInfo_Click(object sender, EventArgs e)
+        {
+            frmEditYear tempedityear = new frmEditYear();
+            tempedityear.Show();
+            frmkeepDisplayInfo.Hide();
         }
     }
 }

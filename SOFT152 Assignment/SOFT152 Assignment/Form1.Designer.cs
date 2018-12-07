@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnDisplayInfo = new System.Windows.Forms.Button();
             this.btnEditMonthInfo = new System.Windows.Forms.Button();
+            this.btnEditYearInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // combLocation
@@ -84,7 +85,7 @@
             // 
             this.btnDisplayInfo.Location = new System.Drawing.Point(94, 136);
             this.btnDisplayInfo.Name = "btnDisplayInfo";
-            this.btnDisplayInfo.Size = new System.Drawing.Size(142, 35);
+            this.btnDisplayInfo.Size = new System.Drawing.Size(150, 35);
             this.btnDisplayInfo.TabIndex = 5;
             this.btnDisplayInfo.Text = "Show Year\'s Month info";
             this.btnDisplayInfo.UseVisualStyleBackColor = true;
@@ -92,19 +93,30 @@
             // 
             // btnEditMonthInfo
             // 
-            this.btnEditMonthInfo.Location = new System.Drawing.Point(94, 213);
+            this.btnEditMonthInfo.Location = new System.Drawing.Point(94, 212);
             this.btnEditMonthInfo.Name = "btnEditMonthInfo";
-            this.btnEditMonthInfo.Size = new System.Drawing.Size(142, 38);
+            this.btnEditMonthInfo.Size = new System.Drawing.Size(150, 38);
             this.btnEditMonthInfo.TabIndex = 6;
             this.btnEditMonthInfo.Text = "Edit a month\'s Info";
             this.btnEditMonthInfo.UseVisualStyleBackColor = true;
             this.btnEditMonthInfo.Click += new System.EventHandler(this.btnEditMonthInfo_Click);
+            // 
+            // btnEditYearInfo
+            // 
+            this.btnEditYearInfo.Location = new System.Drawing.Point(94, 265);
+            this.btnEditYearInfo.Name = "btnEditYearInfo";
+            this.btnEditYearInfo.Size = new System.Drawing.Size(150, 38);
+            this.btnEditYearInfo.TabIndex = 7;
+            this.btnEditYearInfo.Text = "Edit a Years info";
+            this.btnEditYearInfo.UseVisualStyleBackColor = true;
+            this.btnEditYearInfo.Click += new System.EventHandler(this.btnEditYearInfo_Click);
             // 
             // DisplayInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEditYearInfo);
             this.Controls.Add(this.btnEditMonthInfo);
             this.Controls.Add(this.btnDisplayInfo);
             this.Controls.Add(this.label2);
@@ -129,6 +141,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDisplayInfo;
         private System.Windows.Forms.Button btnEditMonthInfo;
+        private System.Windows.Forms.Button btnEditYearInfo;
     }
 }
 

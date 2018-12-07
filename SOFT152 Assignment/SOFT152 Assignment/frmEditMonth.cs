@@ -68,18 +68,11 @@ namespace SOFT152_Assignment
             lstCurrentmonth.Items.Add("Hours of sun: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].getHoursOfSun());
         }
 
-
-
-
-
         private void btnCancel_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(Data.locations[0].getyearinfo()[0].getmonthinfo()[0].getMaxTemp());
-            //DisplayInfo temdisplayinfo = new DisplayInfo();
-            DisplayInfo.frmkeepDisplayInfo.Show();
-            //temdisplayinfo.Show();
+        {         
+            DisplayInfo.frmkeepDisplayInfo.Show();          
             frmkeepEditMonth.Close();
-            MessageBox.Show(Data.locations[0].getyearinfo()[0].getmonthinfo()[0].getMaxTemp());
+            //MessageBox.Show(Data.locations[0].getyearinfo()[0].getmonthinfo()[0].getMaxTemp());
         }
 
         private void btnEditAll_Click(object sender, EventArgs e)
@@ -89,29 +82,32 @@ namespace SOFT152_Assignment
 
         private void EditMonthValues()
         {
-            string newmaxtemp = txtnewMaxTemp.Text;
-            string newmintemp = txtNewMinTemp.Text;
-            string newnumfrostdays = txtNumFrostDays.Text;
-            string newmmofrain = txtNewMmOfRain.Text;
-            string newhoursofsun = txtNewHoursOfSun.Text;
+            string newmaxtemp;
+            string newmintemp;
+            string newnumfrostdays;
+            string newmmofrain;
+            string newhoursofsun;
+
+
+            newmaxtemp = txtnewMaxTemp.Text;
+            newmintemp = txtNewMinTemp.Text;
+            newnumfrostdays = txtNumFrostDays.Text;
+            newmmofrain = txtNewMmOfRain.Text;
+            newhoursofsun = txtNewHoursOfSun.Text;
+
+            Console.WriteLine("please make sure all boxes have numbers inside ");
 
             int locationpos = combLocation.SelectedIndex;
             int yearpos = combYear.SelectedIndex;
             int monthpos = combMonth.SelectedIndex;
 
-
-            //Month[] newmonth = new Month[0];
-            //newmonth[0] = new Month(Convert.ToString(monthpos), newmaxtemp, newmintemp, newnumfrostdays, newmmofrain, newhoursofsun);
-            //Data.locations[locationpos].getyearinfo()[yearpos].setmonthinfo(newmonth);
-
             Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMaxTemp(newmaxtemp);
-            MessageBox.Show(locationpos.ToString()+" "+yearpos+" "+monthpos+" "+Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].getMaxTemp());
-            //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMaxTemp(newmaxtemp);
-            //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMinTemp(newmintemp);
-            //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setAirFrostNum(newnumfrostdays);
-            //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMmOfRain(newmmofrain);
-            //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setHoursOfSun(newhoursofsun);
-
+            Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMaxTemp(newmaxtemp);
+            Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMinTemp(newmintemp);
+            Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setAirFrostNum(newnumfrostdays);
+            Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMmOfRain(newmmofrain);
+            Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setHoursOfSun(newhoursofsun);
+            MessageBox.Show("new values have been set");
         }
     }
 }

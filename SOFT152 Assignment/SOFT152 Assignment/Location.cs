@@ -126,8 +126,9 @@ namespace SOFT152_Assignment
                 //this will loop based on what value numyears is. 
                 for (int j = 0; j < numyears; j++)
                 {
-                    string yearID = locationfile.ReadLine();
                     string yeardesc = locationfile.ReadLine();
+                    string yearID = locationfile.ReadLine();
+                    
                     Data.locations[i].yearInfo[j] = new Year(yearID, yeardesc, new Month[12]);
                     //this loops 12 times because, there are 12 months in a year
                     for (int k = 0; k < 12; k++)
