@@ -50,16 +50,16 @@ namespace SOFT152_Assignment
            
             int locationpos = combLocation.SelectedIndex;
             int yearpos = combYear.SelectedIndex;
-            MessageBox.Show(Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[0].getMaxTemp());
+      
             for (int i = 0; i < 12; i++)
             {
-                lstMonthInfo.Items.Add("Month: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMonthID());
-                lstMonthInfo.Items.Add("Max Temperature: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMaxTemp());
-                lstMonthInfo.Items.Add("Min temp: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMinTemp());
-                lstMonthInfo.Items.Add("Number of days with air frost: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getAirFrostNum());
-                lstMonthInfo.Items.Add("mm of rain: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMmOfRain());
-                lstMonthInfo.Items.Add("Hours of sun: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getHoursOfSun());
-                lstMonthInfo.Items.Add(" ");
+                lstInfo.Items.Add("Month: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMonthID());
+                lstInfo.Items.Add("Max Temperature: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMaxTemp());
+                lstInfo.Items.Add("Min temp: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMinTemp());
+                lstInfo.Items.Add("Number of days with air frost: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getAirFrostNum());
+                lstInfo.Items.Add("mm of rain: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMmOfRain());
+                lstInfo.Items.Add("Hours of sun: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getHoursOfSun());
+                lstInfo.Items.Add(" ");
             }
         }
 
@@ -76,6 +76,26 @@ namespace SOFT152_Assignment
             frmEditYear tempedityear = new frmEditYear();
             tempedityear.Show();
             frmkeepDisplayInfo.Hide();
+        }
+
+        private void btnShowLocationData_Click(object sender, EventArgs e)
+        {
+            int numLocations = Data.locations.Length;
+
+
+            //string theLocationName, string theStreetName, string theCountry,
+            //string thePostcode, string theLatitude, string theLongitude, int theNumYears
+            for (int i = 0; i < numLocations; i++)
+            {
+                lstInfo.Items.Add("Location name: " + Data.locations[i].getLocationName());
+                lstInfo.Items.Add("Street name: " + Data.locations[i].getStreetName());
+                lstInfo.Items.Add("Country: " + Data.locations[i].getCountry());
+                lstInfo.Items.Add("Postcode:" + Data.locations[i].getPostcode());
+                lstInfo.Items.Add("latitude: " + Data.locations[i].getLatitude());
+                lstInfo.Items.Add("Longitude: " + Data.locations[i].getLongitude());
+                lstInfo.Items.Add("Number of years of data recorded: " + Data.locations[i].getnumyears());
+                lstInfo.Items.Add(" ");
+            }
         }
     }
 }

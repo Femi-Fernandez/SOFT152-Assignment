@@ -30,12 +30,13 @@
         {
             this.combLocation = new System.Windows.Forms.ComboBox();
             this.combYear = new System.Windows.Forms.ComboBox();
-            this.lstMonthInfo = new System.Windows.Forms.ListBox();
+            this.lstInfo = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnDisplayInfo = new System.Windows.Forms.Button();
+            this.btnDisplayMonthInfo = new System.Windows.Forms.Button();
             this.btnEditMonthInfo = new System.Windows.Forms.Button();
             this.btnEditYearInfo = new System.Windows.Forms.Button();
+            this.btnShowLocationData = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // combLocation
@@ -55,13 +56,13 @@
             this.combYear.Size = new System.Drawing.Size(150, 21);
             this.combYear.TabIndex = 1;
             // 
-            // lstMonthInfo
+            // lstInfo
             // 
-            this.lstMonthInfo.FormattingEnabled = true;
-            this.lstMonthInfo.Location = new System.Drawing.Point(420, 49);
-            this.lstMonthInfo.Name = "lstMonthInfo";
-            this.lstMonthInfo.Size = new System.Drawing.Size(355, 368);
-            this.lstMonthInfo.TabIndex = 2;
+            this.lstInfo.FormattingEnabled = true;
+            this.lstInfo.Location = new System.Drawing.Point(420, 49);
+            this.lstInfo.Name = "lstInfo";
+            this.lstInfo.Size = new System.Drawing.Size(355, 368);
+            this.lstInfo.TabIndex = 2;
             // 
             // label1
             // 
@@ -81,15 +82,15 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "year";
             // 
-            // btnDisplayInfo
+            // btnDisplayMonthInfo
             // 
-            this.btnDisplayInfo.Location = new System.Drawing.Point(94, 136);
-            this.btnDisplayInfo.Name = "btnDisplayInfo";
-            this.btnDisplayInfo.Size = new System.Drawing.Size(150, 35);
-            this.btnDisplayInfo.TabIndex = 5;
-            this.btnDisplayInfo.Text = "Show Year\'s Month info";
-            this.btnDisplayInfo.UseVisualStyleBackColor = true;
-            this.btnDisplayInfo.Click += new System.EventHandler(this.btnDisplayInfo_Click);
+            this.btnDisplayMonthInfo.Location = new System.Drawing.Point(18, 138);
+            this.btnDisplayMonthInfo.Name = "btnDisplayMonthInfo";
+            this.btnDisplayMonthInfo.Size = new System.Drawing.Size(150, 35);
+            this.btnDisplayMonthInfo.TabIndex = 5;
+            this.btnDisplayMonthInfo.Text = "Show Year\'s Month info";
+            this.btnDisplayMonthInfo.UseVisualStyleBackColor = true;
+            this.btnDisplayMonthInfo.Click += new System.EventHandler(this.btnDisplayInfo_Click);
             // 
             // btnEditMonthInfo
             // 
@@ -111,17 +112,28 @@
             this.btnEditYearInfo.UseVisualStyleBackColor = true;
             this.btnEditYearInfo.Click += new System.EventHandler(this.btnEditYearInfo_Click);
             // 
+            // btnShowLocationData
+            // 
+            this.btnShowLocationData.Location = new System.Drawing.Point(233, 138);
+            this.btnShowLocationData.Name = "btnShowLocationData";
+            this.btnShowLocationData.Size = new System.Drawing.Size(150, 35);
+            this.btnShowLocationData.TabIndex = 8;
+            this.btnShowLocationData.Text = "Show location data";
+            this.btnShowLocationData.UseVisualStyleBackColor = true;
+            this.btnShowLocationData.Click += new System.EventHandler(this.btnShowLocationData_Click);
+            // 
             // DisplayInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnShowLocationData);
             this.Controls.Add(this.btnEditYearInfo);
             this.Controls.Add(this.btnEditMonthInfo);
-            this.Controls.Add(this.btnDisplayInfo);
+            this.Controls.Add(this.btnDisplayMonthInfo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lstMonthInfo);
+            this.Controls.Add(this.lstInfo);
             this.Controls.Add(this.combYear);
             this.Controls.Add(this.combLocation);
             this.Name = "DisplayInfo";
@@ -136,12 +148,13 @@
 
         private System.Windows.Forms.ComboBox combLocation;
         private System.Windows.Forms.ComboBox combYear;
-        private System.Windows.Forms.ListBox lstMonthInfo;
+        private System.Windows.Forms.ListBox lstInfo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnDisplayInfo;
+        private System.Windows.Forms.Button btnDisplayMonthInfo;
         private System.Windows.Forms.Button btnEditMonthInfo;
         private System.Windows.Forms.Button btnEditYearInfo;
+        private System.Windows.Forms.Button btnShowLocationData;
     }
 }
 
