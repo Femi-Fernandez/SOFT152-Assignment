@@ -47,9 +47,10 @@ namespace SOFT152_Assignment
 
         private void btnDisplayInfo_Click(object sender, EventArgs e)
         {
+           
             int locationpos = combLocation.SelectedIndex;
             int yearpos = combYear.SelectedIndex;
-
+            MessageBox.Show(Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[0].getMaxTemp());
             for (int i = 0; i < 12; i++)
             {
                 lstMonthInfo.Items.Add("Month: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMonthID());

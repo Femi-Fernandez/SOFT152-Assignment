@@ -74,9 +74,12 @@ namespace SOFT152_Assignment
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            DisplayInfo temdisplayinfo = new DisplayInfo();
-            temdisplayinfo.Show();
-            frmkeepEditMonth.Hide();
+            MessageBox.Show(Data.locations[0].getyearinfo()[0].getmonthinfo()[0].getMaxTemp());
+            //DisplayInfo temdisplayinfo = new DisplayInfo();
+            DisplayInfo.frmkeepDisplayInfo.Show();
+            //temdisplayinfo.Show();
+            frmkeepEditMonth.Close();
+            MessageBox.Show(Data.locations[0].getyearinfo()[0].getmonthinfo()[0].getMaxTemp());
         }
 
         private void btnEditAll_Click(object sender, EventArgs e)
@@ -102,7 +105,7 @@ namespace SOFT152_Assignment
             //Data.locations[locationpos].getyearinfo()[yearpos].setmonthinfo(newmonth);
 
             Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMaxTemp(newmaxtemp);
-
+            MessageBox.Show(locationpos.ToString()+" "+yearpos+" "+monthpos+" "+Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].getMaxTemp());
             //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMaxTemp(newmaxtemp);
             //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMinTemp(newmintemp);
             //Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setAirFrostNum(newnumfrostdays);
