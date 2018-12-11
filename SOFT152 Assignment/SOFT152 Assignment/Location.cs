@@ -9,6 +9,7 @@ namespace SOFT152_Assignment
 {
     class Location
     {
+
         private string locationName;
         private string streetName;
         private string country;
@@ -109,7 +110,6 @@ namespace SOFT152_Assignment
             //this will loop however many locations there are.
             for (int i = 0; i < numoflocations; i++)
             {
-
                 string locationname = locationfile.ReadLine();
                 string streetname = locationfile.ReadLine();
                 string country = locationfile.ReadLine();

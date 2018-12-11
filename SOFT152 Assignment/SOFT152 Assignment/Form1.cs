@@ -104,6 +104,10 @@ namespace SOFT152_Assignment
             }
         }
 
-
+        private void btnUpdateFile_Click(object sender, EventArgs e)
+        {
+            Data.UpdateInputFile();
+            MessageBox.Show("file updated");
+        }
     }
 }

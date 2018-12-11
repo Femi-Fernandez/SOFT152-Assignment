@@ -38,6 +38,7 @@
             this.btnEditYearInfo = new System.Windows.Forms.Button();
             this.btnShowLocationData = new System.Windows.Forms.Button();
             this.btnEditLocationInfo = new System.Windows.Forms.Button();
+            this.btnUpdateFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // combLocation
@@ -95,7 +96,7 @@
             // 
             // btnEditMonthInfo
             // 
-            this.btnEditMonthInfo.Location = new System.Drawing.Point(94, 212);
+            this.btnEditMonthInfo.Location = new System.Drawing.Point(18, 201);
             this.btnEditMonthInfo.Name = "btnEditMonthInfo";
             this.btnEditMonthInfo.Size = new System.Drawing.Size(150, 38);
             this.btnEditMonthInfo.TabIndex = 6;
@@ -105,7 +106,7 @@
             // 
             // btnEditYearInfo
             // 
-            this.btnEditYearInfo.Location = new System.Drawing.Point(94, 265);
+            this.btnEditYearInfo.Location = new System.Drawing.Point(18, 245);
             this.btnEditYearInfo.Name = "btnEditYearInfo";
             this.btnEditYearInfo.Size = new System.Drawing.Size(150, 38);
             this.btnEditYearInfo.TabIndex = 7;
@@ -125,7 +126,7 @@
             // 
             // btnEditLocationInfo
             // 
-            this.btnEditLocationInfo.Location = new System.Drawing.Point(94, 320);
+            this.btnEditLocationInfo.Location = new System.Drawing.Point(18, 289);
             this.btnEditLocationInfo.Name = "btnEditLocationInfo";
             this.btnEditLocationInfo.Size = new System.Drawing.Size(150, 38);
             this.btnEditLocationInfo.TabIndex = 9;
@@ -133,11 +134,22 @@
             this.btnEditLocationInfo.UseVisualStyleBackColor = true;
             this.btnEditLocationInfo.Click += new System.EventHandler(this.btnEditLocationInfo_Click);
             // 
+            // btnUpdateFile
+            // 
+            this.btnUpdateFile.Location = new System.Drawing.Point(18, 333);
+            this.btnUpdateFile.Name = "btnUpdateFile";
+            this.btnUpdateFile.Size = new System.Drawing.Size(150, 38);
+            this.btnUpdateFile.TabIndex = 10;
+            this.btnUpdateFile.Text = "Update input file";
+            this.btnUpdateFile.UseVisualStyleBackColor = true;
+            this.btnUpdateFile.Click += new System.EventHandler(this.btnUpdateFile_Click);
+            // 
             // DisplayInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdateFile);
             this.Controls.Add(this.btnEditLocationInfo);
             this.Controls.Add(this.btnShowLocationData);
             this.Controls.Add(this.btnEditYearInfo);
@@ -168,6 +180,7 @@
         private System.Windows.Forms.Button btnEditYearInfo;
         private System.Windows.Forms.Button btnShowLocationData;
         private System.Windows.Forms.Button btnEditLocationInfo;
+        private System.Windows.Forms.Button btnUpdateFile;
     }
 }
 

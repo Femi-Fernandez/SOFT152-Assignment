@@ -1,4 +1,4 @@
-﻿11
+11
 Lerwick
 Market Street; Lerwick
 Shetland
@@ -9,11 +9,11 @@ ZE1 0JN
 Oh what a terrible year
 1931
 1
-4.9
-0.2
-13
-108
-29.7
+10
+10
+10
+10
+10
 1931
 2
 4.4
@@ -62720,4 +62720,4 @@ Average year all round
 2.7
 4
 82.8
-26.6
+26.611

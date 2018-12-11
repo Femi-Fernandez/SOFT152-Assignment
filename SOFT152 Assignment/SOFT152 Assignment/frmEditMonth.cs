@@ -35,7 +35,7 @@ namespace SOFT152_Assignment
 
             for (int i = 0; i < numyears; i++)
             {
-                combYear.Items.Add(Data.locations[locationpos].getyearinfo()[i].getYearDesc());
+                combYear.Items.Add(Data.locations[locationpos].getyearinfo()[i].getYear());
             }
         }
 

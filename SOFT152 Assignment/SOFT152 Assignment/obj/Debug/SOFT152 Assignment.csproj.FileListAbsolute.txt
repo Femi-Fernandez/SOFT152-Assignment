@@ -23,3 +23,16 @@ C:\Users\afernandez\Downloads\SOFT152 Assignment\SOFT152 Assignment\SOFT152 Assi
 C:\Users\afernandez\Downloads\SOFT152 Assignment\SOFT152 Assignment\SOFT152 Assignment\obj\Debug\SOFT152_Assignment.frmEditYear.resources
 C:\Users\femi\Desktop\SOFT152-Assignment\SOFT152 Assignment\SOFT152 Assignment\obj\Debug\SOFT152_Assignment.frmEditYear.resources
 C:\Users\femi\Desktop\SOFT152-Assignment\SOFT152 Assignment\SOFT152 Assignment\obj\Debug\SOFT152_Assignment.frmEditLocation.resources
+C:\Users\afernandez\Documents\GitHub\SOFT152-Assignment\SOFT152 Assignment\SOFT152 Assignment\obj\Debug\SOFT152 Assignment.csprojAssemblyReference.cache
+C:\Users\afernandez\Documents\GitHub\SOFT152-Assignment\SOFT152 Assignment\SOFT152 Assignment\obj\Debug\SOFT152_Assignment.DisplayInfo.resources
+C:\Users\afernandez\Documents\GitHub\SOFT152-Assignment\SOFT152 Assignment\SOFT152 Assignment\obj\Debug\SOFT152_Assignment.frmEditLocation.resources
+C:\Users\afernandez\Documents\GitHub\SOFT152-Assignment\SOFT152 Assignment\SOFT152 Assignment\obj\Debug\SOFT152_Assignment.frmEditMonth.resources
+C:\Users\afernandez\Documents\GitHub\SOFT152-Assignment\SOFT152 Assignment\SOFT152 Assignment\obj\Debug\SOFT152_Assignment.frmEditYear.resources
+C:\Users\afernandez\Documents\GitHub\SOFT152-Assignment\SOFT152 Assignment\SOFT152 Assignment\obj\Debug\SOFT152_Assignment.Properties.Resources.resources
+C:\Users\afernandez\Documents\GitHub\SOFT152-Assignment\SOFT152 Assignment\SOFT152 Assignment\obj\Debug\SOFT152 Assignment.csproj.GenerateResource.cache
+C:\Users\afernandez\Documents\GitHub\SOFT152-Assignment\SOFT152 Assignment\SOFT152 Assignment\obj\Debug\SOFT152 Assignment.csproj.CoreCompileInputs.cache
+C:\Users\afernandez\Documents\GitHub\SOFT152-Assignment\SOFT152 Assignment\SOFT152 Assignment\obj\Debug\SOFT152 Assignment.exe
+C:\Users\afernandez\Documents\GitHub\SOFT152-Assignment\SOFT152 Assignment\SOFT152 Assignment\obj\Debug\SOFT152 Assignment.pdb
+C:\Users\afernandez\Documents\GitHub\SOFT152-Assignment\SOFT152 Assignment\SOFT152 Assignment\bin\Debug\SOFT152 Assignment.exe.config
+C:\Users\afernandez\Documents\GitHub\SOFT152-Assignment\SOFT152 Assignment\SOFT152 Assignment\bin\Debug\SOFT152 Assignment.exe
+C:\Users\afernandez\Documents\GitHub\SOFT152-Assignment\SOFT152 Assignment\SOFT152 Assignment\bin\Debug\SOFT152 Assignment.pdb
