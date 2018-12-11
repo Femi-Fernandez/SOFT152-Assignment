@@ -47,7 +47,7 @@ namespace SOFT152_Assignment
 
         private void btnDisplayInfo_Click(object sender, EventArgs e)
         {
-           
+            lstInfo.Items.Clear();
             int locationpos = combLocation.SelectedIndex;
             int yearpos = combYear.SelectedIndex;
       
@@ -77,9 +77,15 @@ namespace SOFT152_Assignment
             tempedityear.Show();
             frmkeepDisplayInfo.Hide();
         }
-
+        private void btnEditLocationInfo_Click(object sender, EventArgs e)
+        {
+            frmEditLocation tempeditlocaiton = new frmEditLocation();
+            tempeditlocaiton.Show();
+            frmkeepDisplayInfo.Hide();
+        }
         private void btnShowLocationData_Click(object sender, EventArgs e)
         {
+            lstInfo.Items.Clear();
             int numLocations = Data.locations.Length;
 
 
@@ -97,5 +103,7 @@ namespace SOFT152_Assignment
                 lstInfo.Items.Add(" ");
             }
         }
+
+
     }
 }

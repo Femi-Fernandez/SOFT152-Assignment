@@ -161,6 +161,8 @@ namespace SOFT152_Assignment
                     }
                 }
             }
+
+            locationfile.Close();
         }
 
     }

@@ -37,6 +37,7 @@
             this.btnEditMonthInfo = new System.Windows.Forms.Button();
             this.btnEditYearInfo = new System.Windows.Forms.Button();
             this.btnShowLocationData = new System.Windows.Forms.Button();
+            this.btnEditLocationInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // combLocation
@@ -122,11 +123,22 @@
             this.btnShowLocationData.UseVisualStyleBackColor = true;
             this.btnShowLocationData.Click += new System.EventHandler(this.btnShowLocationData_Click);
             // 
+            // btnEditLocationInfo
+            // 
+            this.btnEditLocationInfo.Location = new System.Drawing.Point(94, 320);
+            this.btnEditLocationInfo.Name = "btnEditLocationInfo";
+            this.btnEditLocationInfo.Size = new System.Drawing.Size(150, 38);
+            this.btnEditLocationInfo.TabIndex = 9;
+            this.btnEditLocationInfo.Text = "Edit a Location\'s info";
+            this.btnEditLocationInfo.UseVisualStyleBackColor = true;
+            this.btnEditLocationInfo.Click += new System.EventHandler(this.btnEditLocationInfo_Click);
+            // 
             // DisplayInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEditLocationInfo);
             this.Controls.Add(this.btnShowLocationData);
             this.Controls.Add(this.btnEditYearInfo);
             this.Controls.Add(this.btnEditMonthInfo);
@@ -155,6 +167,7 @@
         private System.Windows.Forms.Button btnEditMonthInfo;
         private System.Windows.Forms.Button btnEditYearInfo;
         private System.Windows.Forms.Button btnShowLocationData;
+        private System.Windows.Forms.Button btnEditLocationInfo;
     }
 }
 

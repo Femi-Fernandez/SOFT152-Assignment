@@ -72,7 +72,6 @@ namespace SOFT152_Assignment
         {         
             DisplayInfo.frmkeepDisplayInfo.Show();          
             frmkeepEditMonth.Close();
-            //MessageBox.Show(Data.locations[0].getyearinfo()[0].getmonthinfo()[0].getMaxTemp());
         }
 
         private void btnEditAll_Click(object sender, EventArgs e)
@@ -95,7 +94,7 @@ namespace SOFT152_Assignment
             newmmofrain = txtNewMmOfRain.Text;
             newhoursofsun = txtNewHoursOfSun.Text;
 
-            Console.WriteLine("please make sure all boxes have numbers inside ");
+            //Console.WriteLine("please make sure all boxes have numbers inside ");
 
             int locationpos = combLocation.SelectedIndex;
             int yearpos = combYear.SelectedIndex;
