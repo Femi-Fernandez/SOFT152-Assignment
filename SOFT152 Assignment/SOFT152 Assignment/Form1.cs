@@ -83,6 +83,12 @@ namespace SOFT152_Assignment
             tempeditlocaiton.Show();
             frmkeepDisplayInfo.Hide();
         }
+        private void btnAddYearInfo_Click(object sender, EventArgs e)
+        {
+            frmAddYear tempAddYear = new frmAddYear();
+            tempAddYear.Show();
+            frmkeepDisplayInfo.Hide();
+        }
         private void btnShowLocationData_Click(object sender, EventArgs e)
         {
             lstInfo.Items.Clear();
@@ -109,5 +115,7 @@ namespace SOFT152_Assignment
             Data.UpdateInputFile();
             MessageBox.Show("file updated");
         }
+
+
     }
 }

@@ -39,6 +39,7 @@
             this.btnShowLocationData = new System.Windows.Forms.Button();
             this.btnEditLocationInfo = new System.Windows.Forms.Button();
             this.btnUpdateFile = new System.Windows.Forms.Button();
+            this.btnAddYearInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // combLocation
@@ -144,11 +145,22 @@
             this.btnUpdateFile.UseVisualStyleBackColor = true;
             this.btnUpdateFile.Click += new System.EventHandler(this.btnUpdateFile_Click);
             // 
+            // btnAddYearInfo
+            // 
+            this.btnAddYearInfo.Location = new System.Drawing.Point(233, 201);
+            this.btnAddYearInfo.Name = "btnAddYearInfo";
+            this.btnAddYearInfo.Size = new System.Drawing.Size(150, 38);
+            this.btnAddYearInfo.TabIndex = 11;
+            this.btnAddYearInfo.Text = "Add a year to an existing location";
+            this.btnAddYearInfo.UseVisualStyleBackColor = true;
+            this.btnAddYearInfo.Click += new System.EventHandler(this.btnAddYearInfo_Click);
+            // 
             // DisplayInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAddYearInfo);
             this.Controls.Add(this.btnUpdateFile);
             this.Controls.Add(this.btnEditLocationInfo);
             this.Controls.Add(this.btnShowLocationData);
@@ -181,6 +193,7 @@
         private System.Windows.Forms.Button btnShowLocationData;
         private System.Windows.Forms.Button btnEditLocationInfo;
         private System.Windows.Forms.Button btnUpdateFile;
+        private System.Windows.Forms.Button btnAddYearInfo;
     }
 }
 

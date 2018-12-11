@@ -21,6 +21,12 @@ namespace SOFT152_Assignment
             frmkeepEditLocaiton = this;
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DisplayInfo.frmkeepDisplayInfo.Show();
+            frmkeepEditLocaiton.Close();
+        }
+
         private void frmEditLocation_Load(object sender, EventArgs e)
         {
             for (int i = 0; i < 11; i++)
@@ -75,10 +81,6 @@ namespace SOFT152_Assignment
             MessageBox.Show("new values have been set");
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            DisplayInfo.frmkeepDisplayInfo.Show();
-            frmkeepEditLocaiton.Close();
-        }
+
     }
 }
