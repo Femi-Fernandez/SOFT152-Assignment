@@ -90,6 +90,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddMonth.resx">
+      <DependentUpon>frmAddMonth.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddYear.resx">
       <DependentUpon>frmAddYear.cs</DependentUpon>
     </EmbeddedResource>
