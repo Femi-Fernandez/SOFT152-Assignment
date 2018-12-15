@@ -58,6 +58,7 @@
             this.combYear.Name = "combYear";
             this.combYear.Size = new System.Drawing.Size(150, 21);
             this.combYear.TabIndex = 1;
+            this.combYear.SelectedIndexChanged += new System.EventHandler(this.combYear_SelectedIndexChanged);
             // 
             // lstInfo
             // 

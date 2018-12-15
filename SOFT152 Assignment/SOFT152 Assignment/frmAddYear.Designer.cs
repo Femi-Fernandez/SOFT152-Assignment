@@ -36,6 +36,7 @@
             this.txtNewYear = new System.Windows.Forms.TextBox();
             this.txtNewYearDesc = new System.Windows.Forms.TextBox();
             this.btnAddYear = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // combLocation
@@ -106,11 +107,22 @@
             this.btnAddYear.UseVisualStyleBackColor = true;
             this.btnAddYear.Click += new System.EventHandler(this.btnAddYear_Click);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(248, 191);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(128, 47);
+            this.btnCancel.TabIndex = 6;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // frmAddYear
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddYear);
             this.Controls.Add(this.txtNewYearDesc);
             this.Controls.Add(this.txtNewYear);
@@ -137,5 +149,6 @@
         private System.Windows.Forms.TextBox txtNewYear;
         private System.Windows.Forms.TextBox txtNewYearDesc;
         private System.Windows.Forms.Button btnAddYear;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

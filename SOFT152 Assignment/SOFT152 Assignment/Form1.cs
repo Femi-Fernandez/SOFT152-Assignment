@@ -39,6 +39,7 @@ namespace SOFT152_Assignment
 
             int numyears = Data.locations[locationpos].getnumyears();
 
+            combYear.Items.Clear();
             for (int i = 0; i < numyears; i++)
             {
                 combYear.Items.Add(Data.locations[locationpos].getyearinfo()[i].getYear());
@@ -116,6 +117,9 @@ namespace SOFT152_Assignment
             MessageBox.Show("file updated");
         }
 
+        private void combYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -57,15 +57,25 @@ namespace SOFT152_Assignment
             Array.Resize(ref tempYears, tempYears.Length + 1);
             Data.locations[locationpos].setyearinfo(tempYears);
 
+      
             int numyearslength = Data.locations[locationpos].getnumyears();
 
             Data.locations[locationpos].getyearinfo()[numyearslength] = new Year(newyearID, newyearDesc, new Month[12]);
 
-
-            frmAddMonth tempAddmonth = new frmAddMonth();
-            tempAddmonth.Show();
-            frmkeepAddYear.Close();
+            Data.locations[locationpos].setnumyears(Data.locations[locationpos].getnumyears() + 1);
+            for (int i = 0; i < 12; i++)
+            {
+                Data.locations[locationpos].getyearinfo()[numyearslength].getmonthinfo()[i] = new Month(Convert.ToString(i), "0", "0", "0", "0", "0");
+            }
             
+            MessageBox.Show("A new year has been added, with 12 empty months. To edit the info in the month, please use the edit month form.");
+    
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DisplayInfo.frmkeepDisplayInfo.Show();
+            frmkeepAddYear.Close();
         }
     }
 }
