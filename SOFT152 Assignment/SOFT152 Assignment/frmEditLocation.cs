@@ -33,6 +33,7 @@ namespace SOFT152_Assignment
             {
                 comblocation.Items.Add(Data.locations[i].getLocationName());
             }
+            comblocation.SelectedIndex = 0;
         }
 
         private void comblocation_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,12 +73,36 @@ namespace SOFT152_Assignment
 
             int locationpos = comblocation.SelectedIndex;
 
-            Data.locations[locationpos].setLocationName(newLocName);
-            Data.locations[locationpos].setStreetName(newLocStreet);
-            Data.locations[locationpos].setCountry(newLocCountry);
-            Data.locations[locationpos].setPostcode(newLocPostcode);
-            Data.locations[locationpos].setLatitude(newLocLatitude);
-            Data.locations[locationpos].setLongitude(newLocLongitude);
+            if (newLocName != "")
+            {            
+                Data.locations[locationpos].setLocationName(newLocName);
+            }
+            if (newLocStreet != "")
+            {
+                Data.locations[locationpos].setStreetName(newLocStreet);
+            }
+            if (newLocCountry != "")
+            {
+                Data.locations[locationpos].setCountry(newLocCountry);
+            }
+            if (newLocPostcode != "")
+            {
+                Data.locations[locationpos].setPostcode(newLocPostcode);
+            }
+            if (newLocLatitude != "")
+            {
+                Data.locations[locationpos].setLatitude(newLocLatitude);
+            }
+            if (newLocLongitude != "")
+            {
+                Data.locations[locationpos].setLongitude(newLocLongitude);
+            }
+            //Data.locations[locationpos].setLocationName(newLocName);
+            //Data.locations[locationpos].setStreetName(newLocStreet);
+            //Data.locations[locationpos].setCountry(newLocCountry);
+            //Data.locations[locationpos].setPostcode(newLocPostcode);
+            //Data.locations[locationpos].setLatitude(newLocLatitude);
+            //Data.locations[locationpos].setLongitude(newLocLongitude);
             MessageBox.Show("new values have been set");
         }
 

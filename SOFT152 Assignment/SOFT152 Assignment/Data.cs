@@ -11,6 +11,20 @@ namespace SOFT152_Assignment
     {
         public static Location[] locations;
 
+
+        private int numLocation;
+
+        public int getNumLocation()
+        {
+            return numLocation;
+        }
+
+        public void setNumLocation(int inNumLocation)
+        {
+            numLocation = inNumLocation;
+        }
+
+
         public static void UpdateInputFile()
         {
             StreamWriter locationfile = new StreamWriter("inputEXTENDED.txt");

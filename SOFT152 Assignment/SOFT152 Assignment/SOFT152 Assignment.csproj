@@ -52,11 +52,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddMonth.cs">
+    <Compile Include="frmAddLocation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddMonth.Designer.cs">
-      <DependentUpon>frmAddMonth.cs</DependentUpon>
+    <Compile Include="frmAddLocation.Designer.cs">
+      <DependentUpon>frmAddLocation.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddYear.cs">
       <SubType>Form</SubType>
@@ -90,8 +90,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddMonth.resx">
-      <DependentUpon>frmAddMonth.cs</DependentUpon>
+    <EmbeddedResource Include="frmAddLocation.resx">
+      <DependentUpon>frmAddLocation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddYear.resx">
       <DependentUpon>frmAddYear.cs</DependentUpon>

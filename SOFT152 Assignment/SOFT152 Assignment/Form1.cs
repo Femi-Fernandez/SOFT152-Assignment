@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SOFT152_Assignment
 {
@@ -14,7 +15,7 @@ namespace SOFT152_Assignment
     {
 
         public static DisplayInfo frmkeepDisplayInfo = null;
-
+        Data setData = new Data();
         public DisplayInfo()
         {
             InitializeComponent();
@@ -24,9 +25,14 @@ namespace SOFT152_Assignment
         private void Form1_Load(object sender, EventArgs e)
         {
             Data.locations = new Location[0];
+            
             SOFT152_Assignment.Location.setupLocationArray();
 
-            for (int i = 0; i < 11; i++)
+
+            
+            //problem here
+            int numlocations = setData.getNumLocation();
+            for (int i = 0; i < numlocations; i++)
             {
                 combLocation.Items.Add(Data.locations[i].getLocationName());
             }
@@ -44,6 +50,11 @@ namespace SOFT152_Assignment
             {
                 combYear.Items.Add(Data.locations[locationpos].getyearinfo()[i].getYear());
             }
+        }
+
+        private void combYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //This was a mistake, would delete but it causes errors when i tried to.
         }
 
         private void btnDisplayInfo_Click(object sender, EventArgs e)
@@ -90,6 +101,13 @@ namespace SOFT152_Assignment
             tempAddYear.Show();
             frmkeepDisplayInfo.Hide();
         }
+        private void btnAddLocationInfo_Click(object sender, EventArgs e)
+        {
+            frmAddLocation tempAddLocation = new frmAddLocation();
+            tempAddLocation.Show();
+            frmkeepDisplayInfo.Hide();
+        }
+
         private void btnShowLocationData_Click(object sender, EventArgs e)
         {
             lstInfo.Items.Clear();
@@ -117,9 +135,39 @@ namespace SOFT152_Assignment
             MessageBox.Show("file updated");
         }
 
-        private void combYear_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
+            string userSearch;
+            userSearch = txtLocationSearch.Text;
+
+            StreamReader locationfile = new StreamReader("inputEXTENDED.txt");
+            int numoflocations = Convert.ToInt32(locationfile.ReadLine());
+
+            int i = 0;
+            while (i < numoflocations)
+            {
+                if (Data.locations[i].getLocationName() == userSearch)
+                {
+                    lstInfo.Items.Add("Location name: " + Data.locations[i].getLocationName());
+                    lstInfo.Items.Add("Street name: " + Data.locations[i].getStreetName());
+                    lstInfo.Items.Add("Country: " + Data.locations[i].getCountry());
+                    lstInfo.Items.Add("Postcode:" + Data.locations[i].getPostcode());
+                    lstInfo.Items.Add("latitude: " + Data.locations[i].getLatitude());
+                    lstInfo.Items.Add("Longitude: " + Data.locations[i].getLongitude());
+                    lstInfo.Items.Add("Number of years of data recorded: " + Data.locations[i].getnumyears());
+                    lstInfo.Items.Add(" ");
+                    break;
+
+                }
+                else
+                {                
+                    i++;
+                
+                }
+            }
 
         }
+
+
     }
 }

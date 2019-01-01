@@ -103,10 +103,12 @@ namespace SOFT152_Assignment
         {
             //this opens the file so the code can read data from it. 
             StreamReader locationfile = new StreamReader("inputEXTENDED.txt");
-
             
             int numoflocations = Convert.ToInt32(locationfile.ReadLine());
 
+            Data setData = new Data();
+
+            setData.setNumLocation(numoflocations);
             //this will loop however many locations there are.
             for (int i = 0; i < numoflocations; i++)
             {
