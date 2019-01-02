@@ -59,16 +59,22 @@ namespace SOFT152_Assignment
 
       
             int numyearslength = Data.locations[locationpos].getnumyears();
-
-            Data.locations[locationpos].getyearinfo()[numyearslength] = new Year(newyearID, newyearDesc, new Month[12]);
-
-            Data.locations[locationpos].setnumyears(Data.locations[locationpos].getnumyears() + 1);
-            for (int i = 0; i < 12; i++)
+            if ((newyearID == "") || (newyearDesc == ""))
             {
-                Data.locations[locationpos].getyearinfo()[numyearslength].getmonthinfo()[i] = new Month(Convert.ToString(i), "0", "0", "0", "0", "0");
+                MessageBox.Show("Please add a year ID and year description");
             }
-            
-            MessageBox.Show("A new year has been added, with 12 empty months. To edit the info in the month, please use the edit month form.");
+            else
+            {
+                Data.locations[locationpos].getyearinfo()[numyearslength] = new Year(newyearID, newyearDesc, new Month[12]);
+
+                Data.locations[locationpos].setnumyears(Data.locations[locationpos].getnumyears() + 1);
+                for (int i = 0; i < 12; i++)
+                {
+                    Data.locations[locationpos].getyearinfo()[numyearslength].getmonthinfo()[i] = new Month(Convert.ToString(i + 1), "0", "0", "0", "0", "0");
+                }
+
+                MessageBox.Show("A new year has been added, with 12 empty months. To edit the info in the month, please use the edit month form.");
+            }
     
         }
 

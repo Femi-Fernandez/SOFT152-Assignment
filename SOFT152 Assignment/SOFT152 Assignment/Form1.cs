@@ -32,7 +32,7 @@ namespace SOFT152_Assignment
             
             //problem here
             int numlocations = setData.getNumLocation();
-            for (int i = 0; i < numlocations; i++)
+            for (int i = 0; i < 11; i++)
             {
                 combLocation.Items.Add(Data.locations[i].getLocationName());
             }
@@ -62,16 +62,23 @@ namespace SOFT152_Assignment
             lstInfo.Items.Clear();
             int locationpos = combLocation.SelectedIndex;
             int yearpos = combYear.SelectedIndex;
-      
-            for (int i = 0; i < 12; i++)
+
+            if ((locationpos == -1) || (yearpos == -1))
             {
-                lstInfo.Items.Add("Month: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMonthID());
-                lstInfo.Items.Add("Max Temperature: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMaxTemp());
-                lstInfo.Items.Add("Min temp: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMinTemp());
-                lstInfo.Items.Add("Number of days with air frost: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getAirFrostNum());
-                lstInfo.Items.Add("mm of rain: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMmOfRain());
-                lstInfo.Items.Add("Hours of sun: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getHoursOfSun());
-                lstInfo.Items.Add(" ");
+                MessageBox.Show("please select a location and year using the comboboxes.");
+            }
+            else
+            {
+                for (int i = 0; i < 12; i++)
+                {
+                    lstInfo.Items.Add("Month: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMonthID());
+                    lstInfo.Items.Add("Max Temperature: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMaxTemp());
+                    lstInfo.Items.Add("Min temp: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMinTemp());
+                    lstInfo.Items.Add("Number of days with air frost: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getAirFrostNum());
+                    lstInfo.Items.Add("mm of rain: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getMmOfRain());
+                    lstInfo.Items.Add("Hours of sun: " + Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[i].getHoursOfSun());
+                    lstInfo.Items.Add(" ");
+                }
             }
         }
 
@@ -137,6 +144,7 @@ namespace SOFT152_Assignment
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            lstInfo.Items.Clear();
             string userSearch;
             userSearch = txtLocationSearch.Text;
 
