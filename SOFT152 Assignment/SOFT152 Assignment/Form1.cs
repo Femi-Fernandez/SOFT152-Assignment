@@ -25,13 +25,11 @@ namespace SOFT152_Assignment
         private void Form1_Load(object sender, EventArgs e)
         {
             Data.locations = new Location[0];
-            
+
+            //Data data = new Data();
+
             SOFT152_Assignment.Location.setupLocationArray();
-
-
-            
-            //problem here
-            int numlocations = setData.getNumLocation();
+            //int numlocations = data.getNumLocation();
             for (int i = 0; i < 11; i++)
             {
                 combLocation.Items.Add(Data.locations[i].getLocationName());
@@ -115,6 +113,13 @@ namespace SOFT152_Assignment
             frmkeepDisplayInfo.Hide();
         }
 
+        private void btnAnalysis_Click(object sender, EventArgs e)
+        {
+            frmAnalysis tempAnalysis = new frmAnalysis();
+            tempAnalysis.Show();
+            frmkeepDisplayInfo.Hide();
+        }
+
         private void btnShowLocationData_Click(object sender, EventArgs e)
         {
             lstInfo.Items.Clear();
@@ -175,7 +180,6 @@ namespace SOFT152_Assignment
             }
 
         }
-
 
     }
 }

@@ -106,9 +106,11 @@ namespace SOFT152_Assignment
             
             int numoflocations = Convert.ToInt32(locationfile.ReadLine());
 
-            Data setData = new Data();
+            //Data data = new Data();
 
-            setData.setNumLocation(numoflocations);
+            //data.setNumLocation(numoflocations);
+
+
             //this will loop however many locations there are.
             for (int i = 0; i < numoflocations; i++)
             {

@@ -44,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnAddLocationInfo = new System.Windows.Forms.Button();
+            this.btnAnalysis = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // combLocation
@@ -196,11 +197,22 @@
             this.btnAddLocationInfo.UseVisualStyleBackColor = true;
             this.btnAddLocationInfo.Click += new System.EventHandler(this.btnAddLocationInfo_Click);
             // 
+            // btnAnalysis
+            // 
+            this.btnAnalysis.Location = new System.Drawing.Point(237, 364);
+            this.btnAnalysis.Name = "btnAnalysis";
+            this.btnAnalysis.Size = new System.Drawing.Size(150, 38);
+            this.btnAnalysis.TabIndex = 16;
+            this.btnAnalysis.Text = "Analyse data";
+            this.btnAnalysis.UseVisualStyleBackColor = true;
+            this.btnAnalysis.Click += new System.EventHandler(this.btnAnalysis_Click);
+            // 
             // DisplayInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAnalysis);
             this.Controls.Add(this.btnAddLocationInfo);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label3);
@@ -243,6 +255,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnAddLocationInfo;
+        private System.Windows.Forms.Button btnAnalysis;
     }
 }
 
