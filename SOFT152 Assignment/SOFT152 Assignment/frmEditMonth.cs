@@ -21,7 +21,8 @@ namespace SOFT152_Assignment
         }
         private void frmEditMonth_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 11; i++)
+            int numlocations = Data.locations.Length;
+            for (int i = 0; i < numlocations; i++)
             {
                 combLocation.Items.Add(Data.locations[i].getLocationName());
             }
@@ -106,7 +107,6 @@ namespace SOFT152_Assignment
                 Convert.ToInt32(newmmofrain);
                 Convert.ToInt32(newhoursofsun);
 
-                Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMaxTemp(newmaxtemp);
                 Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMaxTemp(newmaxtemp);
                 Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMinTemp(newmintemp);
                 Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setAirFrostNum(newnumfrostdays);

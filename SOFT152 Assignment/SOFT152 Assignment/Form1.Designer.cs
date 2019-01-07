@@ -45,6 +45,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnAddLocationInfo = new System.Windows.Forms.Button();
             this.btnAnalysis = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // combLocation
@@ -207,11 +208,22 @@
             this.btnAnalysis.UseVisualStyleBackColor = true;
             this.btnAnalysis.Click += new System.EventHandler(this.btnAnalysis_Click);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(279, 78);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(108, 23);
+            this.btnRefresh.TabIndex = 17;
+            this.btnRefresh.Text = "Refresh location list";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // DisplayInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnAnalysis);
             this.Controls.Add(this.btnAddLocationInfo);
             this.Controls.Add(this.btnSearch);
@@ -256,6 +268,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnAddLocationInfo;
         private System.Windows.Forms.Button btnAnalysis;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
 

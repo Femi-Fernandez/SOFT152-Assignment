@@ -15,7 +15,7 @@ namespace SOFT152_Assignment
     {
 
         public static DisplayInfo frmkeepDisplayInfo = null;
-        Data setData = new Data();
+
         public DisplayInfo()
         {
             InitializeComponent();
@@ -26,15 +26,26 @@ namespace SOFT152_Assignment
         {
             Data.locations = new Location[0];
 
-            //Data data = new Data();
-
             SOFT152_Assignment.Location.setupLocationArray();
-            //int numlocations = data.getNumLocation();
-            for (int i = 0; i < 11; i++)
+
+            int numlocations = Data.locations.Length;
+
+           
+            for (int i = 0; i < numlocations; i++)
+            {
+                combLocation.Items.Add(Data.locations[i].getLocationName());
+            }          
+        }
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            combLocation.Items.Clear();
+            int numlocations = Data.locations.Length;
+
+            MessageBox.Show(Convert.ToString(numlocations));
+            for (int i = 0; i < numlocations; i++)
             {
                 combLocation.Items.Add(Data.locations[i].getLocationName());
             }
-            
         }
 
         private void combLocation_SelectedIndexChanged(object sender, EventArgs e)
@@ -52,7 +63,7 @@ namespace SOFT152_Assignment
 
         private void combYear_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //This was a mistake, would delete but it causes errors when i tried to.
+            //This was a mistake, would delete but it causes errors when i try to.
         }
 
         private void btnDisplayInfo_Click(object sender, EventArgs e)
@@ -180,6 +191,7 @@ namespace SOFT152_Assignment
             }
 
         }
+
 
     }
 }

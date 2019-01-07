@@ -22,7 +22,8 @@ namespace SOFT152_Assignment
 
         private void frmAddYear_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 11; i++)
+            int numlocations = Data.locations.Length;
+            for (int i = 0; i < numlocations; i++)
             {
                 combLocation.Items.Add(Data.locations[i].getLocationName());
             }
@@ -47,18 +48,11 @@ namespace SOFT152_Assignment
             int locationpos = combLocation.SelectedIndex;
 
             string newyearID;
-            string newyearDesc;
-            
+            string newyearDesc;           
 
             newyearID = txtNewYear.Text;
             newyearDesc = txtNewYearDesc.Text;
 
-            Year[] tempYears = Data.locations[locationpos].getyearinfo();
-            Array.Resize(ref tempYears, tempYears.Length + 1);
-            Data.locations[locationpos].setyearinfo(tempYears);
-
-      
-            int numyearslength = Data.locations[locationpos].getnumyears();
             if ((newyearID == "") || (newyearDesc == ""))
             {
                 MessageBox.Show("Please add a year ID and year description");
@@ -68,6 +62,13 @@ namespace SOFT152_Assignment
 
                 try
                 {
+
+                    Year[] tempYears = Data.locations[locationpos].getyearinfo();
+                    Array.Resize(ref tempYears, tempYears.Length + 1);
+                    Data.locations[locationpos].setyearinfo(tempYears);
+
+                    int numyearslength = Data.locations[locationpos].getnumyears();
+
                     Convert.ToInt32(newyearID);
                     Data.locations[locationpos].getyearinfo()[numyearslength] = new Year(newyearID, newyearDesc, new Month[12]);
 

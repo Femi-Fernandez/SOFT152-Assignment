@@ -11,27 +11,14 @@ namespace SOFT152_Assignment
     {
         public static Location[] locations;
 
-
-        private int numLocation;
-
-        public int getNumLocation()
-        {
-            return numLocation;
-        }
-
-        public void setNumLocation(int inNumLocation)
-        {
-            numLocation = inNumLocation;
-        }
-
-
         public static void UpdateInputFile()
         {
             StreamWriter locationfile = new StreamWriter("inputEXTENDED.txt");
 
-            locationfile.WriteLine("11");
+            int numlocations = Data.locations.Length;
+            locationfile.WriteLine(numlocations);
 
-            for (int i = 0; i < 11; i++)
+            for (int i = 0; i < numlocations; i++)
             {
                 locationfile.WriteLine(locations[i].getLocationName());
                 locationfile.WriteLine(locations[i].getStreetName());

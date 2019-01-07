@@ -22,7 +22,8 @@ namespace SOFT152_Assignment
 
         private void frmEditYear_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 11; i++)
+            int numlocations = Data.locations.Length;
+            for (int i = 0; i < numlocations; i++)
             {
                 combLocation.Items.Add(Data.locations[i].getLocationName());
             }
