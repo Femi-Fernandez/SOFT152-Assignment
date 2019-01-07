@@ -47,6 +47,7 @@
             this.txtNewHoursOfSun = new System.Windows.Forms.TextBox();
             this.btnEditAll = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // combLocation
@@ -211,11 +212,21 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(299, 14);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(296, 13);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Only change boxes that you want to edit, leave the rest blank";
+            // 
             // frmEditMonth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEditAll);
             this.Controls.Add(this.txtNewHoursOfSun);
@@ -264,5 +275,6 @@
         private System.Windows.Forms.TextBox txtNewHoursOfSun;
         private System.Windows.Forms.Button btnEditAll;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -62,14 +62,13 @@ namespace SOFT152_Assignment
 
                 try
                 {
-
+                    Convert.ToInt32(newyearID);
                     Year[] tempYears = Data.locations[locationpos].getyearinfo();
                     Array.Resize(ref tempYears, tempYears.Length + 1);
                     Data.locations[locationpos].setyearinfo(tempYears);
 
                     int numyearslength = Data.locations[locationpos].getnumyears();
 
-                    Convert.ToInt32(newyearID);
                     Data.locations[locationpos].getyearinfo()[numyearslength] = new Year(newyearID, newyearDesc, new Month[12]);
 
                     Data.locations[locationpos].setnumyears(Data.locations[locationpos].getnumyears() + 1);

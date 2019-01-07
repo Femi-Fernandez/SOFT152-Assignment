@@ -72,6 +72,7 @@ namespace SOFT152_Assignment
             int locationpos = combLocation.SelectedIndex;
             int yearpos = combYear.SelectedIndex;
 
+            //if either the location combobox or the year combobox are left blank, an error message will be shown. 
             if ((locationpos == -1) || (yearpos == -1))
             {
                 MessageBox.Show("please select a location and year using the comboboxes.");
@@ -91,6 +92,7 @@ namespace SOFT152_Assignment
             }
         }
 
+        //these are the navigation buttons, they go to each different form. 
         private void btnEditMonthInfo_Click(object sender, EventArgs e)
         {
             frmEditMonth tempeditmonth = new frmEditMonth();
@@ -130,6 +132,7 @@ namespace SOFT152_Assignment
             tempAnalysis.Show();
             frmkeepDisplayInfo.Hide();
         }
+        //end of navigation buttons
 
         private void btnShowLocationData_Click(object sender, EventArgs e)
         {
@@ -164,12 +167,13 @@ namespace SOFT152_Assignment
             string userSearch;
             userSearch = txtLocationSearch.Text;
 
-            StreamReader locationfile = new StreamReader("inputEXTENDED.txt");
-            int numoflocations = Convert.ToInt32(locationfile.ReadLine());
+
+            int numlocations = Data.locations.Length;
 
             int i = 0;
-            while (i < numoflocations)
+            while (i < numlocations)
             {
+                //if location name equals what is inside the textbox, its info will be shown. 
                 if (Data.locations[i].getLocationName() == userSearch)
                 {
                     lstInfo.Items.Add("Location name: " + Data.locations[i].getLocationName());

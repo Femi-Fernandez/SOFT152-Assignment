@@ -38,13 +38,15 @@ namespace SOFT152_Assignment
             newLocLatitude = txtNewLocLatitude.Text;
             newLocLongitude = txtNewLocLongitude.Text;
             
-
+            //if any of the boxes are empty, throw up an error. 
             if ((newLocName == "") || (newLocStreet == "") || (newLocCountry == "") || (newLocPostcode == "") || (newLocLatitude == "") || (newLocLongitude == ""))
             {
                 MessageBox.Show("Please make sure all boxes are filled");
             }
             else
             {
+                //this will try convert the new number of years into an integer, and if it cant it will throw up an error, if it
+                //can though it will continue to do the rest of the code. 
                 try
                 {
                     newLocNumYears = Convert.ToInt32(txtNewLocNumYears.Text);

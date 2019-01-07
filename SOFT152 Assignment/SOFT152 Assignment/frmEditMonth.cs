@@ -99,25 +99,49 @@ namespace SOFT152_Assignment
             int yearpos = combYear.SelectedIndex;
             int monthpos = combMonth.SelectedIndex;
 
-            try
+            if ((locationpos == -1) || (yearpos == -1) || (monthpos == -1))
             {
-                Convert.ToInt32(newmaxtemp);
-                Convert.ToInt32(newmintemp);
-                Convert.ToInt32(newnumfrostdays);
-                Convert.ToInt32(newmmofrain);
-                Convert.ToInt32(newhoursofsun);
-
-                Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMaxTemp(newmaxtemp);
-                Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMinTemp(newmintemp);
-                Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setAirFrostNum(newnumfrostdays);
-                Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMmOfRain(newmmofrain);
-                Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setHoursOfSun(newhoursofsun);
-                MessageBox.Show("new values have been set");
+                MessageBox.Show("please make sure you have chosen a location, year and month using the comboboxes.");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("please make sure all of your inputs are numbers (no text or symbols)");
-            }           
+                try
+                {
+
+                    if (newmaxtemp != "")
+                    {
+                        Convert.ToInt32(newmaxtemp);
+                        Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMaxTemp(newmaxtemp);
+                    }
+                    if (newmintemp != "")
+                    {
+                        Convert.ToInt32(newmintemp);
+                        Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMinTemp(newmintemp);
+                    }
+                    if (newnumfrostdays != "")
+                    {
+                        Convert.ToInt32(newnumfrostdays);
+                        Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setAirFrostNum(newnumfrostdays);
+                    }
+                    if (newmmofrain != "")
+                    {
+                        Convert.ToInt32(newmmofrain);
+                        Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setMmOfRain(newmmofrain);
+                    }
+                    if (newhoursofsun != "")
+                    {
+                        Convert.ToInt32(newhoursofsun);
+                        Data.locations[locationpos].getyearinfo()[yearpos].getmonthinfo()[monthpos].setHoursOfSun(newhoursofsun);
+                    }
+
+
+                    MessageBox.Show("new values have been set");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("please make sure all of your inputs are numbers (no text or symbols)");
+                }
+            }
         }
     }
 }

@@ -41,6 +41,7 @@ namespace SOFT152_Assignment
 
             combLocation.SelectedIndex = 0;
 
+            //manually set the values for the data choice combobox. this makes it easier to find which one is selected later. 
             combDataChoice.Items.Clear();
             combDataChoice.Items.Add("Maximum Temperature");
             combDataChoice.Items.Add("Minimum Temperature");
@@ -158,15 +159,18 @@ namespace SOFT152_Assignment
             location3Pos = combLocation2.SelectedIndex;
             year3Pos = combYear2.SelectedIndex;
 
+            //creates a graphics object using the picturebox
             Graphics block;
             block = picChart.CreateGraphics();
             block.Clear(Color.White);
 
+            //create pens to draw on the graphics object there is a different pen for the three different years you can have displayed. 
             Pen chartLines = new Pen(Color.Black);
             Pen chartPen1 = new Pen(Color.Red);
             Pen chartPen2 = new Pen(Color.Blue);
             Pen chartPen3 = new Pen(Color.Green);
 
+            //draws simple grid lines
             block.DrawLine(chartLines, 0, 125, 500, 125);
             block.DrawLine(chartLines, 0, 0, 0, 250);
 
@@ -176,9 +180,12 @@ namespace SOFT152_Assignment
             {
                 if ((location1Pos != -1)&&(year1Pos != -1))
                 {
+                    //gets starting value and end value from array. 
                     float startPointY = Convert.ToSingle(Data.locations[location1Pos].getyearinfo()[year1Pos].getmonthinfo()[i].getMaxTemp());
                     float endPointY = Convert.ToSingle(Data.locations[location1Pos].getyearinfo()[year1Pos].getmonthinfo()[i + 1].getMaxTemp());
 
+                    //draws a line between the start point and end point. The values are negative beacause 0,0 on a graphics 
+                    //object is in the top left corner, so if values were not changes to be negative all graphs would be upside down     
                     block.DrawLine(chartPen1, startPointX, -startPointY*5 + 125, startPointX + 40, -endPointY*5 + 125);
                 }
                 if ((location2Pos != -1) && (year2Pos != -1))
@@ -197,6 +204,8 @@ namespace SOFT152_Assignment
                 }
                 startPointX = startPointX + 40;
             }
+
+            //this sets the values of the labels on the left of the chart. 
             lbl0of5.Text = "-25";
             lbl1of5.Text = "-15";
             lbl2of5.Text = "-5";
